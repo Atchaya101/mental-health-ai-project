@@ -2,25 +2,63 @@ import streamlit as st
 import openai
 from textblob import TextBlob
 import pandas as pd
+import requests
+import random
 
 # Change it to your open ai api key
 openai.api_key = 'your_openai_api_key'
 
 
 # Function to generate a response from GPT-3
-def generate_response(prompt):
-    try:
-        response = openai.chat.completions.create(
-            model="gpt-3.5-turbo",
-            messages=[
-                {"role": "system", "content": "You are a helpful assistant."},
-                {"role": "user", "content": prompt}
-            ]
-        )
-        return response.choices[0].message['content'].strip()
-    except openai.RateLimitError:
-        return "It seems we have reached the API quota limit. Please try again later or check your OpenAI account."
+def generate_response(text, sentiment):
+    text = text.lower()
 
+    negative_responses = [
+        "I'm really sorry you're feeling this way. Want to share what happened? 💙",
+        "That sounds really tough. I'm here to listen if you'd like to talk.",
+        "It’s okay to have bad days. You're not alone in this.",
+        "I'm sorry you're going through this. Take a deep breath—we can talk it through.",
+    ]
+
+    stress_responses = [
+        "It sounds like you're stressed. Maybe try taking a short break or deep breathing.",
+        "Stress can be overwhelming. Want to talk about what's causing it?",
+    ]
+
+    sad_responses = [
+        "I'm really sorry you're feeling sad. Do you want to share more?",
+        "Sadness can feel heavy. I'm here with you 💙",
+    ]
+
+    positive_responses = [
+        "That's great to hear! Keep that positive energy going 😊",
+        "I'm glad you're feeling good! What made your day better?",
+    ]
+
+    neutral_responses = [
+        "I understand how you're feeling. Would you like to talk more?",
+        "I'm here for you. Tell me what's on your mind.",
+    ]
+
+    try:
+        # keyword-based smarter replies
+        if "stress" in text:
+            return random.choice(stress_responses)
+
+        elif "sad" in text or "bad day" in text or "terrible" in text:
+            return random.choice(sad_responses)
+
+        elif sentiment == "Negative":
+            return random.choice(negative_responses)
+
+        elif sentiment == "Positive":
+            return random.choice(positive_responses)
+
+        else:
+            return random.choice(neutral_responses)
+
+    except Exception as e:
+        return f"Error generating response: {str(e)}"
 
 # Analyze sentiment
 def analyze_sentiment(text):
