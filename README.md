@@ -1,4 +1,3 @@
-```md
 # 💬 Mental Health Support Chatbot
 
 A simple AI-powered chatbot that provides emotional support by analyzing user input and generating empathetic responses.
@@ -7,7 +6,7 @@ A simple AI-powered chatbot that provides emotional support by analyzing user in
 
 ## 📌 Project Overview
 
-This project is a **Mental Health Support Chatbot** developed using **Python, Flask, and Streamlit**.  
+This project is a **Mental Health Support Chatbot** developed using **Python, Flask, and Streamlit**.
 It allows users to express their feelings and receive supportive responses in real-time.
 
 The system uses **basic sentiment analysis** to understand user emotions and respond accordingly.
@@ -16,12 +15,12 @@ The system uses **basic sentiment analysis** to understand user emotions and res
 
 ## 🎯 Features
 
-- 💬 Interactive chat interface (Streamlit)
-- 🧠 Sentiment analysis (Positive / Negative / Neutral)
-- 🤖 AI-style response generation
-- ⚡ Real-time response using Flask API
-- 🐳 Docker support for containerization
-- 🌐 Lightweight and easy to run
+* 💬 Interactive chat interface (Streamlit)
+* 🧠 Sentiment analysis (Positive / Negative / Neutral)
+* 🤖 AI-style response generation
+* ⚡ Real-time response using Flask API
+* 🐳 Docker support for containerization
+* 🌐 Lightweight and easy to run
 
 ---
 
@@ -33,19 +32,14 @@ User → Streamlit UI → Flask API → Sentiment Analysis → Response Generati
 
 ## 🛠️ Tech Stack
 
-- **Frontend:** Streamlit  
-- **Backend:** Flask  
-- **Language:** Python  
-- **Libraries:**  
-  - torch (optional ML usage)  
-  - flask  
-  - streamlit  
+* **Frontend:** Streamlit
+* **Backend:** Flask
+* **Language:** Python
+* **Libraries:** flask, streamlit, torch (optional)
 
 ---
 
 ## 📂 Project Structure
-
-```
 
 mental-health-ai-project/
 │── app.py            # Streamlit UI
@@ -54,35 +48,26 @@ mental-health-ai-project/
 │── Dockerfile        # Containerization
 │── README.md
 
-````
-
 ---
 
 ## 🚀 How to Run the Project
 
 ### 🔹 Step 1: Clone the repository
-```bash
+
 git clone https://github.com/your-username/mental-health-ai-project.git
 cd mental-health-ai-project
-````
 
 ### 🔹 Step 2: Install dependencies
 
-```bash
 pip install -r requirements.txt
-```
 
 ### 🔹 Step 3: Run backend API
 
-```bash
 python api.py
-```
 
 ### 🔹 Step 4: Run frontend
 
-```bash
 streamlit run app.py
-```
 
 ---
 
@@ -90,31 +75,21 @@ streamlit run app.py
 
 ### Build Docker Image
 
-```bash
 docker build -t mental-health-ai .
-```
 
 ### Run Container
 
-```bash
 docker run -p 8501:8501 mental-health-ai
-```
 
 ---
 
 ## 🧪 Example Usage
 
 Input:
-
-```
 I feel stressed
-```
 
 Output:
-
-```
 I'm really sorry you're feeling this way. It's okay to feel stressed sometimes. You're not alone 💙
-```
 
 ---
 
@@ -160,28 +135,3 @@ This chatbot is for **educational purposes only** and should not replace profess
 ## 📜 License
 
 This project is licensed under the MIT License.
-
-```
-
----
-
-# 💬 Real talk
-
-Now your repo:
-✔ looks professional  
-✔ easy to understand  
-✔ recruiter-ready  
-✔ examiner-impressive  
-
----
-
-# 🚀 Optional upgrade (high impact)
-
-I can also:
-✔ add badges (cool GitHub look 😎)  
-✔ add screenshots section  
-✔ make it portfolio-level  
-
-Just say: **“make it fancy”** 💯
-```
-
