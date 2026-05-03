@@ -54,7 +54,8 @@ mental-health-ai-project/
 
 ### 🔹 Step 1: Clone the repository
 
-git clone https://github.com/your-username/mental-health-ai-project.git
+git clone https://github.com/Atchaya101/mental-health-ai-project.git
+
 cd mental-health-ai-project
 
 ### 🔹 Step 2: Install dependencies
