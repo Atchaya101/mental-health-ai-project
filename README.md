@@ -130,11 +130,6 @@ By providing accessible emotional support through technology.
 
 This chatbot is for **educational purposes only** and should not replace professional mental health services.
 
----
-
-## 👩‍💻 Author
-
-**Atchaya Parthipan**
 
 ---
 
