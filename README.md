@@ -43,13 +43,13 @@ User → Streamlit UI → Flask API → Sentiment Analysis → Response Generati
 
 mental-health-ai-project/
 
-│── app.py            # Streamlit UI
+│── app.py             # Streamlit UI
 
-│── api.py            # Flask backend API
+│── api.py             # Flask backend API
 
-│── requirements.txt  # Dependencies
+│── requirements.txt   # Dependencies
 
-│── Dockerfile        # Containerization
+│── Dockerfile         # Containerization
 
 │── README.md
 
